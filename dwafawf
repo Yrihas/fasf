@@ -1,0 +1,12 @@
+	-- Find and stop all playing sounds
+	local function stopAllMusic()
+		for _, sound in pairs(game.Workspace:GetChildren()) do
+			if sound:IsA("Sound") then
+				sound:Stop()
+				sound:Destroy() -- Optional: Destroy the sound object after stopping
+			end
+		end
+	end
+
+	-- Call function to stop all music when the script runs
+	stopAllMusic()
